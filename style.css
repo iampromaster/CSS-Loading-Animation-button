@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+
+.loader {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  gap: 2px;
+  transform: rotate(45deg);
+}
+
+.loader span {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  animation: anim 1.5s ease-in-out infinite;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  35%,
+  65% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.loader span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(4),
+.loader span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.loader span:nth-child(1),
+.loader span:nth-child(5),
+.loader span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(2),
+.loader span:nth-child(6){
+  animation-delay: 0.9s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+
+.loader span:nth-child(1),
+.loader span:nth-child(2),
+.loader span:nth-child(3) {
+  background: #4bc88b;
+}
+
+.loader span:nth-child(4),
+.loader span:nth-child(5),
+.loader span:nth-child(6) {
+  background: #f22a8a;
+}
+
+.loader span:nth-child(7),
+.loader span:nth-child(8),
+.loader span:nth-child(9) {
+  background: #3675f3;
+}
